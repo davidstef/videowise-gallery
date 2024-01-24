@@ -1,0 +1,6 @@
+<div id="masonry" class="masonry-grid">
+  <div *ngFor="let photo of photos" class="masonry-item" [ngClass]="{'empty-batch': !photo.isVisible}">
+    <p>{{ photo.description }}</p>
+    <img [src]="photo.urls.small" [alt]="photo.description" >
+  </div>
+</div>
